@@ -30,8 +30,8 @@ hangman_art = {
         "/ \\")
 }
 
-ran_word = random.choice(hangman_word)
 def main():
+    ran_word = random.choice(hangman_word)
     tries = 0
     guessed = []
     progress = '_'*len(ran_word)
@@ -76,6 +76,7 @@ def main():
         if tries == 6:
             print('******* HangMan Game *******')
             print('GameOver! You Lost...')
+            print('----------------------------')
             print(f"The word was: {ran_word}")
             print('****************************')
             break
@@ -83,6 +84,7 @@ def main():
         if '_' not in progress:
             print('******* HangMan Game *******')
             print('You won!')
+            print('----------------------------')
             print(f"You guessed word: {ran_word} \nMistakes: {tries}")
             print('****************************')
             break
